@@ -1,0 +1,14 @@
+node_modules/
+dist/
+.env
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+server/data/
+apikey.txt
+*.log
+tmp/
+deploy/*.tar.gz
+.DS_Store
+.idea/

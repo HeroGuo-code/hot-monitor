@@ -1,0 +1,18 @@
+[Unit]
+Description=AI Hotspot Monitor (Lite)
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/hot-monitor/server
+ExecStart=/usr/bin/node dist/index.js
+Restart=always
+RestartSec=5
+Environment=NODE_ENV=production
+EnvironmentFile=/opt/hot-monitor/server/.env
+
+# 内存限制（4G 小服务器防失控）
+MemoryMax=300M
+
+[Install]
+WantedBy=multi-user.target

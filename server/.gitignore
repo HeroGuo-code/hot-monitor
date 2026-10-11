@@ -1,0 +1,7 @@
+node_modules
+# Keep environment variables out of version control
+.env
+
+# SQLite 数据与运行时产物
+data/
+dist/
